@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "author": "Marcos Azevedo<m4rcos.azevedo@gmail.com>",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "csvtojson": "2.0",
+    "debug": "4.1",
+    "json-to-csv-stream": "1.1",
+    "stream-concat": "^0.3.0"
+  }
+}
