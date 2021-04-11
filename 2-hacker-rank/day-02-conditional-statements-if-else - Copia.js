@@ -26,7 +26,7 @@ const getGrade(score) {
 
 // testing
 console.time()
-  console.log(factorial(11))
+  console.loggetGrade(11))
 console.timeEnd()
 
 //output
