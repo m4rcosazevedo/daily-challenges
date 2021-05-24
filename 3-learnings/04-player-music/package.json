@@ -1,0 +1,16 @@
+{
+  "name": "player-music",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx sass sass/style.scss css/style.css",
+    "compile:watch": "npx compile --watch"
+  },
+  "keywords": [],
+  "author": "Marcos Azevedo <m4rcos.azevedo@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.32.8"
+  }
+}

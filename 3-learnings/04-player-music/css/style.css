@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.d-none {
+  display: none;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #26282b;
+  font-family: "Roboto", sans-serif;
+  color: #999a9c;
+}
+
+#player {
+  background-image: linear-gradient(#34393f, #191a1d);
+  width: 290px;
+  height: 540px;
+  border: 1px solid #3a3e46;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+}
+#player > div {
+  width: 100%;
+}
+#player > div.top {
+  height: 50px;
+}
+#player > div.cover {
+  display: flex;
+  justify-content: center;
+}
+#player > div.cover .image {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #1e2226;
+  box-shadow: 5px 5px 15px #17181a, -10px -10px 15px 5px #3a3e46;
+}
+#player > div.cover .image img {
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  margin: -15px;
+}
+#player > div.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+}
+#player > div.info .title {
+  font-size: 18px;
+  font-weight: bold;
+}
+#player > div.info .artist {
+  font-size: 12px;
+}
+#player > div.progress {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+#player > div.progress .current-time,
+#player > div.progress .time {
+  font-size: 12px;
+}
+#player > div.progress .time {
+  margin-left: auto;
+}
+#player > div.progress .line {
+  width: 100%;
+  margin-top: 5px;
+  height: 6px;
+  background: #070a0b;
+  border-radius: 5px;
+  border: 1px solid #3a3e46;
+  border-top: 0;
+  position: relative;
+}
+#player > div.progress .line input#seekbar {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  opacity: 0.1;
+}
+#player > div.progress .line .current {
+  background-image: linear-gradient(90deg, #be2210, #a88a1d);
+  height: 4px;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 45%;
+  border-radius: 5px;
+}
+#player > div.progress .line .current:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #191a1d;
+  top: -8px;
+  left: calc(100% - 5px);
+  border-radius: 50%;
+  box-shadow: inset 5px 5px 10px #3a3e46, inset -5px -5px 10px #17181a, 0 0 5px #191a1d;
+}
+#player > div.progress .line .current:after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  left: calc(100% + 2px);
+  top: -1px;
+  background: #a88a1d;
+  border-radius: 50%;
+}
+#player > div.bar {
+  display: flex;
+  justify-content: space-evenly;
+}
+#player > div.bar > div {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #1f2327;
+  background: linear-gradient(-45deg, #17181a, #3a3e46);
+  box-shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+#player > div.bar > div:active {
+  background: linear-gradient(135deg, #17181a, #3a3e46);
+}
+#player > div.bar > div.play-pause {
+  border-color: #d2440e;
+  background: linear-gradient(-45deg, #cd2b13, #ec570c);
+}
+#player > div.bar > div.play-pause:active {
+  background: linear-gradient(135deg, #cd2b13, #ec570c);
+}
+#player > div.bar > div.play-pause svg {
+  color: #fff;
+}
+
+svg {
+  width: 10px;
+  color: #84878a;
+}
+
+/*# sourceMappingURL=style.css.map */
