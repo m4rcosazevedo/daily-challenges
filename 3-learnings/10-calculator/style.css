@@ -1,0 +1,130 @@
+html, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, input, button {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 200% 200%;
+	animation: gradient 15s ease infinite;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.calculator{ 
+  width: 270px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #fff;
+  padding: 4px;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgb(255, 255, 255, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.display {
+  width: 100%;
+  background: #ffff;
+  border-radius: 4px;
+  border-bottom: 4px solid #f2f2f2;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 4px;
+  height: 140px;
+}
+
+.history {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #777;
+}
+
+.result {
+  font-size: 42px;
+  font-weight: bold;
+  color: #676767;
+}
+
+.backspace {
+  width: calc(25% - 3px);
+  border: 0;
+  margin-bottom: 4px;
+  margin-left: auto;
+  height: 45px;
+  background-color: rgba(230, 230, 230, 1);
+  cursor: pointer;
+  transition: all .3s linear;
+}
+.backspace:hover {
+  background-color: rgba(230, 230, 230, 0.5);
+}
+.buttons {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 4px;
+}
+
+.button {
+  background: #fff;
+  border: 0;
+  width: 100%;
+  height: 45px;
+  cursor: pointer;
+  transition: all .3s linear;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+button {
+  color: #777;
+}
+
+svg:not(:root).svg-inline--fa {
+  overflow: visible;
+}
+
+.svg-inline--fa.fa-w-20 {
+  width: 1.25em;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
